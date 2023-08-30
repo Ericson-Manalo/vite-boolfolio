@@ -14,8 +14,30 @@ export default {
     data(){
         return{
             projects : [],
+            apiUrl : ''
         }
     },
+
+    methods:{
+        getProjects(){
+
+            axios.get(this.apiUrl, {
+                params: {
+            }
+            })
+            .then(function (response) {
+            console.log(response);
+            })
+            .catch(function (error) {
+            console.log(error);
+            })
+
+        }
+    },
+
+    created(){
+        this.getProjects();
+    }
 }
 </script>
 
