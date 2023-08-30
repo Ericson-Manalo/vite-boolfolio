@@ -67,7 +67,7 @@ export default {
 
         div.single-card{
             width: calc((100% / 3) - 3rem);
-            border-radius: 1rem;
+            border-radius: 10px;
             padding: 1rem;
             margin-right: 1rem;
             background-color: rgb(51, 50, 50);
