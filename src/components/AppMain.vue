@@ -3,6 +3,14 @@
         <h1>
             main
         </h1>
+        <div>
+            <div v-for="project in projects">
+                <h2>
+                    {{project.title}}
+                </h2>
+
+            </div>
+        </div>
     </div>
 </template>
 
@@ -14,7 +22,7 @@ export default {
     data(){
         return{
             projects : [],
-            apiUrl : ''
+            apiUrl : 'http://127.0.0.1:8000/api/projects'
         }
     },
 
@@ -25,8 +33,9 @@ export default {
                 params: {
             }
             })
-            .then(function (response) {
-            console.log(response);
+            .then((response) => {
+            console.log(response.data.results.data);
+            this.projects = response.data.results.data;
             })
             .catch(function (error) {
             console.log(error);
