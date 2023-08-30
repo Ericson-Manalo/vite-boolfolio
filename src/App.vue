@@ -11,6 +11,7 @@ import AppFooter from './components/AppFooter.vue';
 
 </template>
 
-<style lang="">
+<style lang="scss">
+  @import "../node_modules/bootstrap/scss/bootstrap.scss";
   
 </style>
