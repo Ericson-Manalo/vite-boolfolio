@@ -3,12 +3,21 @@
         <h1>
             main
         </h1>
-        <div>
-            <div v-for="project in projects">
+        <div class="cards">
+            <div class="single-card" v-for="project in projects">
                 <h2>
                     {{project.title}}
                 </h2>
-
+                <h3>
+                    {{project.category}}
+                </h3>
+                <p>
+                    {{project.description}}
+                </p>
+                <!-- <img :src="project.image" alt=""> -->
+                <p>
+                    {{project.type.name}}
+                </p>
             </div>
         </div>
     </div>
@@ -50,6 +59,20 @@ export default {
 }
 </script>
 
-<style lang="">
-    
+<style lang="scss">
+    div.cards{
+        display:flex;
+        max-width: 1200px;
+        flex-wrap: wrap;
+
+        div.single-card{
+            width: calc((100% / 3) - 3rem);
+            border-radius: 1rem;
+            padding: 1rem;
+            margin-right: 1rem;
+            background-color: rgb(51, 50, 50);
+            color: rgb(255, 255, 255);
+            margin-bottom: 2rem;
+        }
+    }
 </style>
