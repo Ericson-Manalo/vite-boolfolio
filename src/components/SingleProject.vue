@@ -1,12 +1,15 @@
 <template lang="">
-    <article class="">
-        <h2>
+    <article class="single-card">
+        <h1>
             {{ project.title }}
-        </h2>
+        </h1>
+        <h3>
+            {{project.category}} -- Created in: {{project.created_date}}
+        </h3>
 
-        <h5>
+        <h4>
             {{ project.description }}
-        </h5>
+        </h4>
 
     </article>
 </template>
@@ -19,6 +22,14 @@ export default {
     
 }
 </script>
-<style lang="">
-    
+<style lang="scss">
+    article.single-card{
+            width: calc((100% / 3) - 3rem);
+            border-radius: 10px;
+            padding: 1rem;
+            margin-right: 1rem;
+            background-color: rgb(51, 50, 50);
+            color: rgb(255, 255, 255);
+            margin-bottom: 2rem;
+        }
 </style>
