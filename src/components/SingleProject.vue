@@ -4,12 +4,17 @@
             {{ project.title }}
         </h1>
         <h3>
-            {{project.category}} -- Created in: {{project.created_date}}
+            {{project.category}} -- {{project.type.name}}
+            
         </h3>
 
-        <h4>
+        <p>
+            Created in: {{project.created_date}}
+        </p>
+
+        <p>
             {{ project.description }}
-        </h4>
+        </p>
 
     </article>
 </template>
@@ -23,6 +28,7 @@ export default {
 }
 </script>
 <style lang="scss">
+
     article.single-card{
             width: calc((100% / 3) - 3rem);
             border-radius: 10px;
