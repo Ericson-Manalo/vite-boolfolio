@@ -23,14 +23,14 @@ const router = createRouter({
             component: AboutUs
         },
         {
-            path: '/projects-show',
-            name: 'projects.index',
-            component: ProjectShow
+            path: '/projects',
+            name: 'project.index',
+            component: Projects
         },
         {
-            path: '/projects',
+            path: '/projects-show',
             name: 'projects.show',
-            component: Projects
+            component: ProjectShow
         },
         
     ]   
