@@ -1,6 +1,12 @@
 <template lang="">
     <section>
-        <SingleProject/>
+        <h2>
+            Here's are the projects:
+        </h2>
+        <div  class="cards">
+            <SingleProject v-for="project in projects" :project='project' />
+            
+        </div>
     </section>
 </template>
 
@@ -11,7 +17,8 @@ import SingleProject from '../components/SingleProject.vue';
 
 
     export default {
-        name: {
+        name: 'Projects',
+        components: {
             SingleProject
         },
 
@@ -47,6 +54,18 @@ import SingleProject from '../components/SingleProject.vue';
 </script>
 
 
-<style lang="">
+<style lang="scss" scoped>
+
+    section{
+        text-align: center;
+        
+        div.cards{
+            display:flex;
+            max-width: 1200px;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
     
 </style>
