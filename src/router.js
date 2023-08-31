@@ -3,8 +3,8 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 import AboutUs from './pages/AboutUs.vue';
 import HomePage from './pages/HomePage.vue';
-import ProjectList from './pages/ProjectList.vue';
-import SingleProject from './pages/SingleProject.vue';
+import ProjectShow from './pages/ProjectShow.vue';
+import Projects from './pages/Projects.vue';
 
 
 
@@ -23,14 +23,14 @@ const router = createRouter({
             component: AboutUs
         },
         {
-            path: '/project-list',
+            path: '/projects-show',
             name: 'projects.index',
-            component: ProjectList
+            component: ProjectShow
         },
         {
-            path: '/single-project',
+            path: '/projects',
             name: 'projects.show',
-            component: SingleProject
+            component: Projects
         },
         
     ]   
