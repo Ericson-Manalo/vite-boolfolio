@@ -30,7 +30,7 @@
                     },
                     {
                         route: 'project.index',
-                        name: 'Posts'
+                        name: 'Projects'
                     },
                 ]
             }
