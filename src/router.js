@@ -16,14 +16,14 @@ const router = createRouter({
             component: HomePage,
         },
         {
-            path: '/blog',
-            name: 'posts',
-            component: PostList
+            path: '/about-us',
+            name: 'about',
+            component: AboutUs
         },
         {
-            path: '/blog',
-            name: 'posts',
-            component: PostList
+            path: '/project-list',
+            name: 'projects.index',
+            component: ProjectList
         },
         
     ]   
